@@ -14,6 +14,7 @@ do
 	echo "7. Install Apache,Mysql and PHP"
 	echo "8. Install Mosquitto MQTT"
 	echo "9. Install Nodejs"
+	echo "10.Fix Video files Ubuntu18.04"
         echo "q. Quit"
 	echo "------------------------------------"
         echo -n "Please enter your choice: "
@@ -64,6 +65,10 @@ do
 		 sudo apt install curl
 		 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 		 sudo apt install nodejs
+		 exit;;
+	    '10')echo "Starting install decoders"
+		 sudo apt install libdvdnav4 libdvdread4 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly libdvd-pkg
+            	 sudo apt install ubuntu-restricted-extras
 		 exit;;
             'q') echo "Quiting!!";;
             *)   echo "menu item is not available; try again!";;
